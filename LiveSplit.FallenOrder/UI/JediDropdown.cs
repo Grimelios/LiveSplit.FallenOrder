@@ -10,11 +10,18 @@ namespace LiveSplit.FallenOrder.UI
 
 		private static readonly Color DefaultColor = Color.White;
 		private static readonly Color DisabledColor = Color.FromArgb(255, DisabledLightness, DisabledLightness, DisabledLightness);
+		private static readonly Color HighlightColor = Color.DeepSkyBlue;
 		private static readonly Color UnfinishedColor = Color.PaleVioletRed;
 
 		private JediSplitControl parent;
 
 		private int previousIndex;
+
+		// This constructor is necessary in order to add the split type dropdown (which is added via the editor rather
+		// than through code).
+		public JediDropdown()
+		{
+		}
 
 		public JediDropdown(JediSplitControl parent)
 		{
@@ -71,7 +78,7 @@ namespace LiveSplit.FallenOrder.UI
 				{
 					// Category lines (starting with a dash) are filled white (same as the background color) in order
 					// to emphasize that they're not selectable.
-					fillColor = isCategoryLine ? Color.White : Color.PaleTurquoise;
+					fillColor = isCategoryLine ? Color.White : HighlightColor;
 				}
 				else
 				{

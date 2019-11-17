@@ -28,10 +28,39 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			components = new System.ComponentModel.Container();
+			this.jediSplitCollectionControl1 = new LiveSplit.FallenOrder.UI.JediSplitCollectionControl();
+			this.jediSettingsControl1 = new LiveSplit.FallenOrder.UI.JediSettingsControl();
+			this.SuspendLayout();
+			// 
+			// jediSplitCollectionControl1
+			// 
+			this.jediSplitCollectionControl1.Location = new System.Drawing.Point(4, 72);
+			this.jediSplitCollectionControl1.Name = "jediSplitCollectionControl1";
+			this.jediSplitCollectionControl1.Size = new System.Drawing.Size(431, 251);
+			this.jediSplitCollectionControl1.TabIndex = 0;
+			// 
+			// jediSettingsControl1
+			// 
+			this.jediSettingsControl1.Location = new System.Drawing.Point(4, 4);
+			this.jediSettingsControl1.Name = "jediSettingsControl1";
+			this.jediSettingsControl1.Size = new System.Drawing.Size(299, 62);
+			this.jediSettingsControl1.TabIndex = 1;
+			// 
+			// JediMasterControl
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.jediSettingsControl1);
+			this.Controls.Add(this.jediSplitCollectionControl1);
+			this.Name = "JediMasterControl";
+			this.Size = new System.Drawing.Size(518, 388);
+			this.ResumeLayout(false);
+
 		}
 
 		#endregion
+
+		private JediSplitCollectionControl jediSplitCollectionControl1;
+		private JediSettingsControl jediSettingsControl1;
 	}
 }

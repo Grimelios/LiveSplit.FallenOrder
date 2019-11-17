@@ -10,6 +10,8 @@ namespace LiveSplit.FallenOrder.Data
 	{
 		Ability,
 		Boss,
+		Echo,
+		Lightsaber,
 		Manual,
 		Meditation,
 		Skill,

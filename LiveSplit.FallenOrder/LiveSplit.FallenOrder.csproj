@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{16E7F5A1-9FB6-49DF-B508-8A4200C57B92}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LiveSplit.FallenOrder</RootNamespace>
     <AssemblyName>LiveSplit.FallenOrder</AssemblyName>
@@ -28,6 +28,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LiveSplit.FallenOrder.JediTester</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="LiveSplit.Core">
@@ -56,7 +59,21 @@
     <Compile Include="Memory\JediMemory.cs" />
     <Compile Include="Memory\JediPointers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI\JediDropdown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\JediForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JediForm.Designer.cs">
+      <DependentUpon>JediForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JediLabel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\JediMasterControl.cs">
@@ -86,9 +103,27 @@
     <Compile Include="VersionHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JediForm.resx">
+      <DependentUpon>JediForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JediMasterControl.resx">
+      <DependentUpon>JediMasterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JediSplitCollectionControl.resx">
+      <DependentUpon>JediSplitCollectionControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\JediSplitControl.resx">
       <DependentUpon>JediSplitControl.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\Add.png" />
+    <Content Include="Resources\Delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

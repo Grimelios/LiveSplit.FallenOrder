@@ -28,18 +28,33 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.splitTypeDropdown = new LiveSplit.FallenOrder.UI.JediDropdown();
 			this.SuspendLayout();
+			// 
+			// splitTypeDropdown
+			// 
+			this.splitTypeDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.splitTypeDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.splitTypeDropdown.FormattingEnabled = true;
+			this.splitTypeDropdown.Location = new System.Drawing.Point(3, 3);
+			this.splitTypeDropdown.Name = "splitTypeDropdown";
+			this.splitTypeDropdown.Prompt = null;
+			this.splitTypeDropdown.Size = new System.Drawing.Size(88, 21);
+			this.splitTypeDropdown.TabIndex = 5;
 			// 
 			// JediSplitControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.splitTypeDropdown);
 			this.Name = "JediSplitControl";
-			this.Size = new System.Drawing.Size(650, 173);
+			this.Size = new System.Drawing.Size(532, 152);
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
+
+		private JediDropdown splitTypeDropdown;
 	}
 }
